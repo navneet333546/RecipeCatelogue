@@ -61,3 +61,14 @@ def show_recipes(request):
 
 def error_404_view(request,exception):
     return render(request,'404.html')
+
+def show_recipeDetails(request):
+    try:
+        recipeindex = 0
+        for index in recipesList:
+            if(index.id == int(request.GET['recipeID']) ):
+                recipeindex = int(request.GET['recipeID']) 
+        recipeData = recipesList[recipeindex]
+        return render(request,'recipeDetails.html',{'recipeData':recipeData})    
+    except:
+        print('Something Went Wrong')
