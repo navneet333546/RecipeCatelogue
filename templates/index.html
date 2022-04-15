@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Catelogue</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<header>
+
+    <a href="http://127.0.0.1:8000/" class="logo"><i class="fas fa-utensils"></i>Recipes.</a>
+
+    <nav class="navbar">
+        <a href="http://127.0.0.1:8000/">home</a>
+        <a href="http://127.0.0.1:8000/recipeApp/recipes/">Recipes Catelogue</a>
+        <a href="http://127.0.0.1:8000/recipeApp/dataModel">Data Model</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        
+       
+        
+    </div>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <h3>Recipes Catelogue</h3>
+                    <b><p>We Chose Recipes Catelogue Because we all are foodie  and relate to it so It's easier to communicate between the teams as everyone have some knowledge about recipes and related stuff,Our project have mainly 3 pages Home, recipes Catelogue and recipe Detail page, Recipes Catelogue shows all the Recipes we have in our database and its dynamic , we can add more recipes from admin panel and when you click on the particular recipe you will find to know the all other details regarding that Recipe.</p>
+                    <br>
+                    </b><span>Group Members:</span>
+                    <p>Hamza Farooq - s349021 <br>
+                        Email: S349021@students.cdu.edu.au <br>
+                        Navneet kaur - s333546
+                        <br>
+                        Email: s333546@students.cdu.edu.au <br>
+                        Khang Nguyen (Dave) - s311849 <br>
+                        Email: S311849@students.cdu.edu.au</p>
+                    <a href="http://127.0.0.1:8000/recipeApp/recipes/" class="btn">Show Catelogue</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/home-img-1.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+
+
+<!-- footer section ends -->
+
+<!-- loader part  -->
+<div class="loader-container">
+    <img src="{% static 'images/loader.gif' %}" alt="">
+</div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
