@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Catelogue</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<header>
+
+    <a href="http://127.0.0.1:8000/" class="logo"><i class="fas fa-utensils"></i>Recipes.</a>
+
+    <nav class="navbar">
+        <a href="http://127.0.0.1:8000/">home</a>
+        <a href="http://127.0.0.1:8000/recipeApp/recipes/">Recipes Catelogue</a>
+        <a href="http://127.0.0.1:8000/recipeApp/dataModel">Data Model</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        
+       
+        
+    </div>
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <h3>Data Model</h3>
+                    <ul><li><span>What it is Called ?</span></li></ul>
+                        <p>Recipes</p>
+                    
+                        <ul><li><span>What its purpose is ?</span></li></ul>
+                        <p>Its purpose is to store recipe object data so we can later use it in our application</p>
+                        
+                    <ul><li><span>What's data types have been used ?</span></li></ul>
+                    <p>We have used various data types given below in the Table</p><style>
+                        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+    padding-left: 20px;
+    padding-right: 20px;
+  
+}
+                    </style>
+                        <table >
+                        <thead>
+                          <tr >
+                            <th><p>Data Type</p></th>
+                            <th><p>Field</p></th>
+                            
+                          </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td><p> charField </p></td>
+                             <td><p>Title</p></td>
+                           </tr>
+                           <tr>
+                            <td><p>ImageField</p></td>
+                            <td><p>Recipe Image</p></td>
+                           
+                           </tr>
+                           <tr>
+                            <td><p>TextField</p></td>
+                            <td><p>Description</p></td>
+                           
+                           </tr>
+                           <tr>
+                            <td><p>IntField</p></td>
+                            <td><p>Prep Time</p></td>
+                           
+                           </tr>
+                           <tr>
+                             <td><p>DateField</p></td>
+                            <td><p>Date</p></td>
+                           </tr>
+                           <tr>
+                           </tr>
+                        </tbody>
+                      </table>
+                         <br>
+                    
+                    <ul><li><span>What validations has been implemented ?</span></li></ul>
+                        <p>We have put validation and constraints on some fields like title length cannot be greater than 150 characters and author length cannot be greater than 100.</p>
+                        
+            
+                    <p></p>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/model.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

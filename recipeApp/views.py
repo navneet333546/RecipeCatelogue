@@ -72,3 +72,9 @@ def show_recipeDetails(request):
         return render(request,'recipeDetails.html',{'recipeData':recipeData})    
     except:
         print('Something Went Wrong')
+
+def show_dataModel(request):
+    try:
+        return render(request,'dataModel.html')    
+    except:
+        print('Something Went Wrong')        
